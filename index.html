@@ -1,91 +1,196 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>My team page</title>
-    <link rel="stylesheet" href="./styles.css">
-</head>
-<body>
-    <div class="container">
-        <div class="head">
-            <h1>The creative crew</h1>
-            <div class="who-we-are">
-                <h3>Who we are</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet ipsam ea suscipit iure assumenda! Voluptates, fugit nobis iste odio necessitatibus, sit deserunt soluta unde enim repellendus nemo quaerat fuga hic?
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=PT+Serif:wght@400;700&family=Poppins:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <!-- <link rel="stylesheet" href="./styles.css"> -->
 
-                </p>
-            </div>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-family: "Poppins", sans-serif;
+      }
+
+      body,
+      html {
+        width: 100%;
+        height: 100%;
+        min-width: 350px;
+       /*  max-width: 750px; */
+      }
+
+      body {
+          display: grid;
+          place-items: center;
+          padding-top: 3rem;
+          /* padding-bottom: 1rem; */
+      }
+
+      .container {
+          width: 100%;
+          height: 100%;
+          min-width: 350px;
+          max-width: 800px;
+          padding: 1rem;
+          /* padding-bottom: 5rem; */
+      }
+
+      .container footer {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          padding: 6rem;
+      }
+
+      .head {
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          gap: 2rem;
+      }
+
+      /* .head, .who-we-are {
+        padding: 1rem;
+      } */
+
+     .head h1 {
+        flex: 0.5;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .who-we-are {
+          flex: 0.5;
+      }
+
+      .content {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 6rem;
+          padding-top: 3rem;
+          padding-bottom: 4rem;
+      }
+
+      
+      .photo-cont {
+          display: flex;
+          width: 300px;
+          height: auto;
+          position: relative;
+          /* margin-left: 2rem; */
+        }
+
+        .photo-cont > .first > h6 {
+            font-size: 18px;
+            font-weight: 600;
+        }
+        
+
+      .photo-cont .first > img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+
+      .position {
+        font-family: "PT Serif", serif;
+        font-size: 12px;
+        font-weight: normal;
+        text-transform: uppercase;
+        transform: rotate(90deg);
+        position: absolute;
+        left: calc(90% + 1rem);
+        top: calc(15% + 1rem);;
+        width: max-content;
+      }
+
+
+      @media screen and (min-width: 750px)  {
+          .head {
+              flex-direction: row;
+          }
+
+        .photo-cont:nth-child(even) {
+            transform: translateY(4rem);
+        }
+
+        /* .photo-cont:nth-child(odd) > .position {
+            top: 25%;
+        }
+ */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="head">
+        <h1>The creative crew</h1>
+        <div class="who-we-are">
+          <h3>Who we are</h3>
+          <p>
+            We are team of creatively diverse. driven. innovative individuals
+            working in various locations from the world.
+          </p>
         </div>
-        <div class="content">
-            <div class="items">
-                <div class="photo-cont">
-                    <div class="first">
-                        <img src="./assets/photo1.png" alt="member-of-the-team">
-                        <h6>{Name}</h6>
-                    </div>
-                    <div class="second">
-                        <h6>{Position}</h6>
-                    </div>
-                </div>
-            </div>
-            <div class="items">
-                <div class="photo-cont">
-                    <div class="first">
-                        <img src="./assets/photo2.png" alt="member-of-the-team">
-                        <h6>{Name}</h6>
-                    </div>
-                    <div class="second">
-                        <h6>{Position}</h6>
-                    </div>
-                </div>
-            </div>
-            <div class="items">
-                <div class="photo-cont">
-                    <div class="first">
-                        <img src="./assets/photo3.png" alt="member-of-the-team">
-                        <h6>{Name}</h6>
-                    </div>
-                    <div class="second">
-                        <h6>{Position}</h6>
-                    </div>
-                </div>
-            </div>
-            <div class="items">
-                <div class="photo-cont">
-                    <div class="first">
-                        <img src="./assets/photo4.png" alt="member-of-the-team">
-                        <h6>{Name}</h6>
-                    </div>
-                    <div class="second">
-                        <h6>{Position}</h6>
-                    </div>
-                </div>
-            </div>
-            <div class="items">
-                <div class="photo-cont">
-                    <div class="first">
-                        <img src="./assets/photo5.png" alt="member-of-the-team">
-                        <h6>{Name}</h6>
-                    </div>
-                    <div class="second">
-                        <h6>{Position}</h6>
-                    </div>
-                </div>
-            </div>
-            <div class="items">
-                <div class="photo-cont">
-                    <div class="first">
-                        <img src="./assets/photo6.png" alt="member-of-the-team">
-                        <h6>{Name}</h6>
-                    </div>
-                    <div class="second">
-                        <h6>{Position}</h6>
-                    </div>
-                </div>
-            </div>
+      </div>
+      <div class="content">
+        <div class="photo-cont">
+          <div class="first">
+            <img src="./assets/photo1.png" alt="member-of-the-team" />
+            <h6>Bill Mahoney</h6>
+          </div>
+            <h6 class="position">Product owner</h6>
         </div>
+        <div class="photo-cont">
+          <div class="first">
+            <img src="./assets/photo2.png" alt="member-of-the-team" />
+            <h6>Saba Cabrera</h6>
+          </div>
+            <h6 class="position">Art Director</h6>
+        </div>
+        <div class="photo-cont">
+          <div class="first">
+            <img src="./assets/photo3.png" alt="member-of-the-team" />
+            <h6>Shae Le</h6>
+          </div>
+            <h6 class="position">Tech Lead</h6>
+        </div>
+        <div class="photo-cont">
+          <div class="first">
+            <img src="./assets/photo4.png" alt="member-of-the-team" />
+            <h6>Slylah Lu</h6>
+          </div>
+            <h6 class="position">UX designer</h6>
+        </div>
+        <div class="photo-cont">
+          <div class="first">
+            <img src="./assets/photo5.png" alt="member-of-the-team" />
+            <h6>Griff Richards</h6>
+          </div>
+            <h6 class="position">Developer</h6>
+        </div>
+        <div class="photo-cont">
+          <div class="first">
+            <img src="./assets/photo6.png" alt="member-of-the-team" />
+            <h6>Stan John</h6>
+          </div>
+            <h6 class="position">Developer</h6>
+        </div>
+      </div>
+      <footer>
+          <h4>Author: Jorge Duran</h4>
+      </footer>
     </div>
-</body>
+  </body>
 </html>
